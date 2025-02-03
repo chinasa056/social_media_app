@@ -1,5 +1,5 @@
 
-const { UUID, UUIDV4 } = require("sequelize");
+// const { UUID, UUIDV4 } = require("sequelize");
 const User = require("../models/userModel")
 const {v4:uuidv4} = require("uuid")
 
@@ -27,7 +27,7 @@ exports.register = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             message: "Internal server error",
-            error:console.error()
+            error:console.log(error)
             
         });
     }
